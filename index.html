@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <div class="music-player">
+    <div class="player-header">
+      <!-- Heading -->
+      <h1 class="now-playing">Now Playing</h1>
+
+      <!-- Dropdown for selecting songs -->
+      <select id="song-select" class="styled-select">
+        <!-- Options will be dynamically added via JavaScript -->
+      </select>
+    </div>
+
+    <!-- Song image -->
+    <div class="song-image">
+      <img id="song-img" src="default-music.png" alt="Song Image">
+    </div>
+
+    <!-- Song title and artist -->
+    <div class="song-info">
+      <h2 id="song-title">Song Title</h2>
+      <h3 id="song-artist">Artist Name</h3>
+    </div>
+
+    <!-- Progress bar and time -->
+    <div class="progress-container">
+      <span id="current-time">00:00</span>
+      <input type="range" id="progress-bar" value="0" min="0" max="100">
+      <span id="duration-time">00:00</span>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="prev-btn" class="control-btn">⏮️</button>
+      <button id="play-btn" class="control-btn">▶️</button>
+      <button id="next-btn" class="control-btn">⏭️</button>
+    </div>
+
+    <!-- Volume control -->
+    <div class="volume-control">
+      <label for="volume" class="volume-label">Volume:</label>
+      <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+    </div>
+  </div>
+
+  <script src="Script/script.js"></script>
+</body>
+</html>
